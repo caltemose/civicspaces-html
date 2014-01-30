@@ -9,8 +9,9 @@ set :js_dir, "assets/js"
 set :images_dir, "assets/img"
 set :fonts_dir, "assets/fonts"
 set :layouts_dir, "layouts"
-set :layout, "default"
+set :layout, false
 #set :build_dir, "build"
+set :frontmatter_extensions, %w(.html .slim)
 
 # markdown options
 set :markdown, :tables => true, :autolink => true, :fenced_code_blocks => true
@@ -29,11 +30,10 @@ configure :build do
   # activate :asset_hash #cachebuster
 end
 
-# Deploy config
-# activate :deploy do |deploy|
-#   deploy.method = :rsync
-#   deploy.user = ""
-#   deploy.host = ""
-#   deploy.path = ""
-#   deploy.after_build = false
-# end
+#Deploy config
+activate :deploy do |deploy|
+  deploy.method = :rsync
+  deploy.user = "chadzilla"
+  deploy.host = "chadzilla.com"
+  deploy.path = "/home/chadzilla/cs.chadzilla.com/"
+end
