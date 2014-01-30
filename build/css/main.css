@@ -1,0 +1,289 @@
+/* Menu/Animation variables */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+html {
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+html, button, input, select, textarea {
+  font-family: serif; }
+
+a:focus {
+  outline: thin dotted; }
+
+a:active, a:hover {
+  outline: 0; }
+
+img {
+  border: 0;
+  -ms-interpolation-mode: bicubic; }
+
+svg:not(:root) {
+  overflow: hidden; }
+
+figure {
+  margin: 0; }
+
+form {
+  margin: 0; }
+
+img {
+  vertical-align: middle; }
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+#masthead {
+  /* wrapper for fixed positioning */
+  position: fixed;
+  top: 0;
+  width: 100%; }
+
+#header {
+  /* contains the h1/logo and burger label */
+  position: relative;
+  width: 100%;
+  background: #ed6a1c;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  #header > h1 {
+    width: 100%;
+    height: 2.4em;
+    margin: 0;
+    padding: 0;
+    font-size: 1.3em;
+    background: #ed6a1c; }
+    #header > h1 > a {
+      display: inline-block;
+      width: 255px;
+      height: 60px;
+      margin: 0.5em 1em 0 0.8em;
+      background: url(../img/civicspaces-logo.png) no-repeat;
+      background-size: contain; }
+      #header > h1 > a > span {
+        display: none; }
+
+#nav {
+  overflow: hidden;
+  width: 100%;
+  max-height: 0;
+  padding: 0;
+  background: #ed6a1c;
+  vertical-align: top;
+  -webkit-transition: max-height 0.2s ease-out;
+  -moz-transition: max-height 0.2s ease-out;
+  -ms-transition: max-height 0.2s ease-out;
+  -o-transition: max-height 0.2s ease-out;
+  transition: max-height 0.2s ease-out; }
+  #nav > ul {
+    list-style: none;
+    width: 100%;
+    margin: 0 0 0;
+    padding: 0; }
+    #nav > ul > li {
+      margin: 0;
+      padding: 0;
+      vertical-align: middle; }
+      #nav > ul > li > a {
+        display: block;
+        margin-bottom: 0.4em;
+        padding: 0.8em 1em;
+        color: white;
+        background: #444; }
+        #nav > ul > li > a:hover, #nav > ul > li > a:focus, #nav > ul > li > a:active {
+          color: white; }
+
+#burger {
+  display: none; }
+  #burger:checked ~ #nav {
+    max-height: 25em; }
+  #burger:checked ~ #header {
+    -webkit-box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.7);
+    -moz-box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 22px 0 rgba(0, 0, 0, 0.7); }
+
+#burgerTrigger {
+  float: right;
+  margin: 0.7em 1em 0;
+  width: 40px;
+  height: 25px;
+  background: url(../img/burger.png) no-repeat; }
+  #burgerTrigger:hover {
+    cursor: pointer; }
+  #burgerTrigger > span {
+    display: none; }
+
+@media screen and (min-width: 44em) {
+  #header > header > h1 > a {
+    margin-left: 1em; }
+
+  #burgerTrigger {
+    display: none; }
+
+  #nav {
+    max-width: 75%;
+    max-height: none;
+    background: none;
+    position: absolute;
+    right: 1em;
+    z-index: 2; }
+    #nav > ul {
+      text-align: right; }
+      #nav > ul > li {
+        width: auto;
+        display: inline-block; }
+        #nav > ul > li > a {
+          background: none; } }
+body {
+  margin: 0;
+  padding: 2em 0 1em;
+  background: white;
+  font-family: Helvetica, Arial, sans-serif;
+  color: black;
+  line-height: 120%; }
+
+h1 {
+  font-size: 1.5em;
+  font-family: Arvo, sans-serif;
+  font-weight: 700;
+  line-height: 105%; }
+  h1 > small {
+    display: block;
+    margin-top: 0.3em;
+    font-size: 0.7em;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    color: black;
+    line-height: 100%; }
+  h1 > a {
+    display: block;
+    margin: 0.3em 0 0;
+    font-size: 0.7em; }
+    h1 > a:hover, h1 > a:focus, h1 > a.selected {
+      color: #000; }
+
+h2 {
+  font-family: Arvo, sans-serif;
+  margin-top: 1.3em; }
+
+h3 {
+  margin: 2em 0 0.5em; }
+
+h2 + h3 {
+  margin-top: 0; }
+
+h3, h4, h5, h6 {
+  font-weight: normal; }
+
+p {
+  margin: 0.3em 0 0.5em; }
+
+a {
+  color: #2577a1;
+  text-decoration: none; }
+  a:hover {
+    color: #123a4e; }
+
+main {
+  margin: 0;
+  padding: 1em; }
+
+.jumbotron {
+  padding: 1em;
+  background: #d8e4ea; }
+  .jumbotron > h1 {
+    margin: 0;
+    padding: 1em 0;
+    font-size: 1.6em; }
+  .jumbotron .promo {
+    background: #fff; }
+
+.promo {
+  margin: 0 0 1em 0;
+  padding: 1em;
+  -webkit-border-radius: 0.3em;
+  -moz-border-radius: 0.3em;
+  border-radius: 0.3em; }
+
+a.button {
+  display: inline-block;
+  margin: 0 1em 0 0;
+  padding: 0.5em 1.5em;
+  background: #236e87;
+  -webkit-border-radius: 1.1em;
+  -moz-border-radius: 1.1em;
+  border-radius: 1.1em;
+  font-family: Arvo, sans-serif;
+  color: #fff; }
+  a.button:hover, a.button:focus {
+    background: #195c73; }
+
+body > footer {
+  padding: 1em 1em 6em;
+  background: #bbb;
+  font-size: 0.8em; }
+  body > footer > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0; }
+    body > footer > ul > li {
+      display: inline-block; }
+      body > footer > ul > li > a {
+        color: #000; }
+        body > footer > ul > li > a:after {
+          content: "|";
+          padding-left: 0.5em;
+          padding-right: 0.25em; }
+      body > footer > ul > li:last-child a:after {
+        content: "";
+        padding: 0; }
+  body > footer > p {
+    margin: 0;
+    padding: 0;
+    color: #444; }
+
+/*
+--------------------------------------------------------
+media query for middle/portrait size range
+
+*/
+@media screen and (min-width: 30em) {
+  body {
+    font-size: 19px; } }
+/*
+--------------------------------------------------------
+media query for larger devices
+
+*/
+@media screen and (min-width: 44em) {
+  body {
+    font-size: 21px; }
+
+  .jumbotron > * {
+    max-width: 60rem;
+    margin-left: auto;
+    margin-right: auto; }
+
+  .jumbotron > h1 {
+    margin-left: auto;
+    margin-right: auto; }
+
+  h1 {
+    font-size: 2em; }
+    h1 small {
+      font-size: 0.6em; } }
