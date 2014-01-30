@@ -13,10 +13,12 @@ html
     == stylesheet_link_tag "main"
     == stylesheet_link_tag "http://fonts.googleapis.com/css?family=Arvo"
 
-  body#body
+  body
 
-    header(role="banner")
+    header#masthead(role="banner")
       
+      input#burger(type='checkbox' name='burger')
+
       nav#nav
         ul
           li
@@ -28,13 +30,11 @@ html
           li.promote
             a(href="/list") List
 
-        a#menuclose(href="#body") close
-
-      
-      
-      h1 CivicSpaces
-
-      a#menuopen(href="#nav") Menu
+      header#header
+        h1 
+          a(href="/")
+            span CivicSpaces
+          label#burgerTrigger(for="burger") 
 
 
     = yield
@@ -54,3 +54,7 @@ html
           a(href='/privacy') Privacy Policy
 
       p.copyright Copyright ©2014 CivicSpaces.
+
+    javascript:
+      document.getElementById("burgerTrigger").onclick = function () {};
+

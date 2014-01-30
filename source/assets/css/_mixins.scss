@@ -3,3 +3,17 @@
   -moz-border-radius: $value;
   border-radius: $value;
 }
+
+@mixin transition($mode, $time, $ease) {
+  -webkit-transition: $mode $time $ease;
+  -moz-transition: $mode $time $ease;
+  -ms-transition: $mode $time $ease;
+  -o-transition: $mode $time $ease;
+  transition: $mode $time $ease;
+}
+
+@mixin box-shadow($a, $b, $c, $d, $e) {
+  -webkit-box-shadow: $a $b $c $d $e;
+  -moz-box-shadow: $a $b $c $d $e;
+  box-shadow: $a $b $c $d $e;
+}

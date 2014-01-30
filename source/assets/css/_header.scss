@@ -1,140 +1,135 @@
-header {
+#masthead { /* wrapper for fixed positioning */
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+#header { /* contains the h1/logo and burger label */
   position: relative;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  min-height: 60px;
+  width: 100%;
   background: $civicOrange;
-  color: #fff;
-  a {
-    color: #eee;
-    &:hover, &:focus, &.selected {
-      color: #fff;
-    }
-  }
+
+  @include box-shadow(0, 2px, 2px, 0, rgba(0,0,0,0.2));
+  @include transition(all, $menuSpeed, ease-in-out);
+
   & > h1 {
-    position: relative;
-    z-index: 1;
-    display: inline-block;
-    margin: 0 0 0.1em 1rem;
-    width: 255px;
-    height: 60px;
-    overflow: hidden;
-    text-indent: $textIndentHide;
-    background: url(../img/civicspaces-logo.png) no-repeat;
+    width: 100%;
+    height: $menuHeight;
+    margin: 0;
+    padding: 0;
+    font-size: 1.3em;
+    background: $civicOrange;
+
+    & > a {
+      display: inline-block;
+      width: 255px;
+      height: 60px;
+      margin: 0.5em 1em 0 0.8em;
+      // @TODO make this in-line data with an auto plugin
+      background: url(../img/civicspaces-logo.png) no-repeat;
+      background-size: contain;
+
+      & > span { display: none; }
+    }
   }
 }
 
 #nav {
-  position: relative;
-  z-index: 200;
+  overflow: hidden;
+  width: 100%;
   max-height: 0;
-  display: none;
-  &:target {
-    display: block;
-    min-height: 5em;
-    max-height: 95vh;
-  }
+  padding: 0;
+  background: $civicOrange;
+  vertical-align: top;
+
+  @include transition(max-height, $menuSpeed, ease-out);
+
   & > ul {
-    margin: 0.2em 0 0 0;
+    list-style: none;
+    width: 100%;
+    margin: 0 0 0;
     padding: 0;
-    list-style-type: none;
-    & > li > a {
-      display: block;
-      margin-bottom: 0.2em;
-      padding: 1em;
-      background: darken($civicOrange, 4%);
-      &:focus, &:hover {
-        background: darken($civicOrange, 7%);
+
+    & > li {
+      margin: 0;
+      padding: 0;
+      vertical-align: middle;
+
+      & > a {
+        display: block;
+        margin-bottom: 0.4em;
+        padding: 0.8em 1em;
+        color: white;
+        background: #444;
+
+        &:hover, &:focus, &:active {
+          color: white;
+        }
       }
     }
   }
 }
 
-#menuclose {
-  position: absolute;
-  z-index: 9999;
-  bottom: -3.75em;
-  right: 0;
-  width: 4em;
-  height: 3em;
-  text-indent: $textIndentHide;
+#burger {
+  display: none;
+
+  &:checked ~ #nav {
+    max-height: 25em;
+  }
+
+  &:checked ~ #header {
+    @include box-shadow(0, 2px, 22px, 0, rgba(0,0,0,0.7));
+  }
 }
 
-#menuopen {
-  position: relative;
+#burgerTrigger {
   float: right;
-  margin: 1.5em 1em 0 0;
+  margin: 0.7em 1em 0;
   width: 40px;
   height: 25px;
+  // @TODO make this in-line data with an auto plugin
   background: url(../img/burger.png) no-repeat;
-  text-indent: $textIndentHide;
+  
+  &:hover { cursor: pointer; }
+
+  & > span { display: none; }
 }
 
-.burger {
-  font-size: 25px; // Icon Size
-  font-family: "serif", Verdana;
-  display: inline-block;
-  line-height: 0.4em;
-  margin: 1em;
-  width: 1em;
-  height: 1em;
-  white-space: pre-wrap;
-  position: relative;
-  &:after {
-    content: "\2014\A\2014"; // En dash
-    display: block;
-  }
-  &:before {
-    content: "\2014\A\2014"; // Em dash
-    position: absolute;
-    top: 0.2em;
-  }
-}
 
-@media all and (min-width: $menuSwitchWidth) {
+@media screen and (min-width: $menuSwitchWidth) {
 
-  header > h1 {
-    display: block;
-    width: 100%;
-    max-width: $maxContentWidth;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: -0.2em;
+  #header > header > h1 > a {
+    margin-left: 1em;
   }
 
-  #menuopen, #menuclose {
+  #burgerTrigger {
     display: none;
   }
 
   #nav {
-    display: block;
-    width: 100%;
-    max-width: $maxContentWidth;
-    margin: 0 auto;
-    
+    max-width: 75%;
+    max-height: none;
+    background: none;
+    position: absolute;
+    //top: 1em;
+    right: 1em;
+    z-index: 2;
+
     & > ul {
-      padding-top: 0.8em;
       text-align: right;
 
       & > li {
+        width: auto;
         display: inline-block;
-        padding-bottom: -1em;
-        vertical-align: top;
+        //padding-left: 1em;
 
         & > a {
-          display: inline;
-          font-size: 0.8em;
           background: none;
-          &:hover {
-            background: none;
-          }
-        }
-
-        &.promote > a{
-          font-size: 1.2em;
         }
       }
+
     }
   }
 }
+
+

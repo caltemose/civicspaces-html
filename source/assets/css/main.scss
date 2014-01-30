@@ -15,6 +15,10 @@ $linkColor: #2577A1;
 $hoverColor: darken($linkColor, 20%);
 $footerFontSize: 0.7em;
 
+/* Menu/Animation variables */
+$menuHeight: 2.4em;
+$menuOffset: -10.4em;
+$menuSpeed: 0.2s;
 
 @import "reset";
 @import "mixins";
@@ -23,7 +27,7 @@ $footerFontSize: 0.7em;
 
 body {
   margin: 0;
-  padding: 0;
+  padding: 2em 0 1em;
   background: $bgColor;
   font-family: $copyFont;
   color: $typeColor;
