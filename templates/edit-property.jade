@@ -1,0 +1,183 @@
+extends layout
+
+block content
+  div.container
+
+    h1 Manage Your Space
+
+    div.row
+      div.col-md-10.col-lg-8
+        p Edit your space details below. You can increase your page's popularity by including more details and uploading several good-quality photos.
+
+    form
+
+      div.section
+
+        h2 Location and Contact Info
+
+        div.row
+          div.col-md-6
+
+            label
+              | *Address: 
+              input.form-control(name="address" type="text" maxlength="128")
+
+            label
+              | City: 
+              input.form-control(name="city" type="text" maxlength="128")
+
+            label
+              | *Zip Code: 
+              input.form-control(name="zip" type="text" maxlength="10")
+
+          
+          div.col-md-6
+            label
+              | *Contact name: 
+              input.form-control(name="contactName" type="text" maxlength="128")
+
+            label
+              | *Contact email: 
+              input.form-control(name="contactEmail" type="text" maxlength="128") 
+
+            label
+              | *Contact phone: 
+              input.form-control(name="contactPhone" type="text" maxlength="16") 
+
+
+      div.section
+
+        h2 Size and Type
+
+        div.row
+
+          div.col-sm-6
+            label 
+              | Type of space: 
+              select.form-control(name="spaceType")
+                option(value="") Select one...
+                option(value="loft") Loft/Mixed Use
+
+            label 
+              | Preferred length of lease:
+              select.form-control(name="leaseLength") 
+                option(value="") None
+                option(value="single") Single-day Use
+
+          div.col-sm-6
+            label
+              | Area: 
+              small (square feet) 
+              input.form-control(type="text" size="5" name="squareFeet" maxlength="5") 
+
+            label
+              | Maximum occupancy:
+              input.form-control(type="text" size="5" name="maxOccupants" maxlength="5") 
+
+          
+
+      div.section
+
+        h2 Allowed Uses
+
+        div.row
+          div.col-sm-6
+            label Allow on premises:
+  
+            div.grouped
+              label
+                input(type="checkbox" name="allowedFood")
+                |  Food &amp; beverage
+
+              label
+                input(type="checkbox" name="allowedAlcohol")
+                |  Alcohol 
+
+              label
+                input(type="checkbox" name="allowedMusic")
+                |  Loud music/noise 
+                small (with owner approval)
+
+          div.col-sm-6
+            label Allowed modifications of space:
+
+            div.grouped
+              label
+                input(type="radio" name="allowedMods" value="none") 
+                |  None
+
+              label
+                input(type="radio" name="allowedMods" value="non-intrusive") 
+                |  Non-intrusive only 
+                small (wall hangings, for example)
+
+              label
+                input(type="radio" name="allowedMods" value="intrusive") 
+                |  Intrusive only 
+                small (with owner's permission)
+
+
+
+      div.section
+
+        h2 Amenities
+
+        div.row
+          div.col-sm-4
+            div.grouped 
+              label
+                input(type="checkbox" name="wifi") 
+                |  Wireless internet
+
+              label
+                input(type="checkbox" name="parking") 
+                |  On-site parking
+
+              label
+                input(type="checkbox" name="handicap") 
+                |  Handicap Access
+
+              label
+                input(type="checkbox" name="furnished") 
+                |  This space is furnished
+
+          div.col-sm-4
+            label Bathroom facilities:
+
+            div.grouped
+              label
+                input(type="radio" name="bathroom" value="none") 
+                |  None
+              label
+                input(type="radio" name="bathroom" value="single") 
+                |  Single bathroom
+              label
+                input(type="radio" name="bathroom" value="multiple") 
+                |  Multiple bathrooms
+
+          div.col-sm-4
+            label Bathroom facilities:
+
+            div.grouped
+              label
+                input(type="radio" name="kitchen" value="none") 
+                |  None
+              label
+                input(type="radio" name="kitchen" value="partial") 
+                |  Partial kitchen
+              label
+                input(type="radio" name="kitchen" value="full") 
+                |  Full kitchen
+
+      div.section
+
+        h2 Photos
+
+
+      div.section
+
+        h2 Description
+        
+      
+      input.btn.btn-success(type="submit" name="submit" value="Save Listing") 
+

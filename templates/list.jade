@@ -1,55 +1,58 @@
 extends layout
 
 block content
-  main
+  div.container
 
     h1 Add a New Space
 
-    section.wrapped
+    p Fill out and submit this form to create a listing for a new space. You will be able to supply a password and create a new user account on the following page.
 
-      form
+    p 
+      | If you already have a user account, please 
+      a(href="/login.html") login 
+      |  first.
 
-        h2.boxed Location and Contact Info
+    p.note
+      small *Required fields.
 
-        div.inner
-          div.col2
+    form
 
-            label
-              | *Address: 
-              input(name="address" type="text" maxlength="128")
+      h2 Location and Contact Info
 
-            label
-              | City: 
-              input(name="city" type="text" maxlength="128")
+      div.row
+        div.col-md-6
 
-            label
-              | *Zip Code: 
-              input(name="zip" type="text" maxlength="10")
+          label
+            | *Address: 
+            input.form-control(name="address" type="text" maxlength="128")
 
-            p.show-2col
-              small *Required fields.
-          
-          div.col2
-            label
-              | *Contact name: 
-              input(name="contactName" type="text" maxlength="128")
+          label
+            | City: 
+            input.form-control(name="city" type="text" maxlength="128")
 
-            label
-              | *Contact email: 
-              input(name="contactEmail" type="text" maxlength="128") 
+          label
+            | *Zip Code: 
+            input.form-control(name="zip" type="text" maxlength="10")
 
-            label
-              | *Contact phone: 
-              input(name="contactPhone" type="text" maxlength="16") 
+        
+        div.col-md-6
+          label
+            | *Contact name: 
+            input.form-control(name="contactName" type="text" maxlength="128")
 
-            label
-              input(name="terms" type="checkbox") 
-              | *I agree to the 
-              a(href="/terms") Terms &amp; Conditions
-              |  for listing properties on this site and am aware of my responsibilities as a property listing agent.
+          label
+            | *Contact email: 
+            input.form-control(name="contactEmail" type="text" maxlength="128") 
 
-            p.show-1col
-              small *Required fields.
+          label
+            | *Contact phone: 
+            input.form-control(name="contactPhone" type="text" maxlength="16") 
 
-            input(type="submit" name="submit" value="Create Listing") 
+          label.terms
+            input(name="terms" type="checkbox") 
+            |  *I agree to the 
+            a(href="/terms") Terms &amp; Conditions
+            |  for listing properties on this site and am aware of my responsibilities as a property listing agent.
+
+          input.btn.btn-success(type="submit" name="submit" value="Create Listing") 
 

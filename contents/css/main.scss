@@ -1,70 +1,130 @@
-$maxWidthDesktop: 44em;
-$maxWidthDesktopRem: 44rem;
-$menuSwitchWidth: 44em;
-$menuSwitchWidthRem: 44rem;
-$maxContentWidth: 60rem;
+body {
+  font-size: 16px;
+  padding-top: 3.5em;
+  background: #eee;
+}
+h1 {
+  margin-bottom: 1em;
+  & > small {
+    display: block;
+  }
+}
 
-$textIndentHide: -9999rem;
-$titleFont: Arvo, sans-serif;
-$copyFont: Helvetica, Arial, sans-serif;
-$bgColor: #fff;
-$paleBg: #d8e4ea;
-$civicOrange: #ed6a1c;
-$typeColor: #000;
-$linkColor: #2577A1;
-$hoverColor: darken($linkColor, 20%);
-$footerFontSize: 0.7em;
+label { 
+  display: block;
+  font-weight: normal;
+  color: #444;
+  & > select {
+    display: block;
+    width: 90%;
+  }
+}
+label.terms {
+  margin: 1.3em 0;
+}
+input.btn {
+  font-size: 1.4em;
+}
 
-/* Menu/Animation variables */
-$menuHeight: 2.4em;
-$menuOffset: -10.4em;
-$menuSpeed: 0.2s;
+.main {
+  margin-top: -0.3em;
+  padding-bottom: 4em;
+  background: #fff;
+}
 
-@import "reset";
-@import "mixins";
-@import "defaults";
-@import "header";
-@import "custom-classes";
-@import "forms";
-@import "footer";
+.no-transition {
+  -webkit-transition: height 0.1s;
+  -moz-transition: height 0.1s;
+  -ms-transition: height 0.1s;
+  -o-transition: height 0.1s;
+  transition: height 0.1s;
 
+  padding-top: 0.2em;
+  font-size: 0.9em;
+}
 
-/*
---------------------------------------------------------
-media query for middle/portrait size range
+.navbar-inverse {
+  background: #ed6a1c;
+  border-color: #ed6a1c;
+  & .navbar-brand {
+    color: #fff;
+  }
+}
+.navbar-inverse .navbar-toggle {
+  border: none;
+  background: none;
+  &:hover, &:focus {
+    background: none;
+  }
+}
+.navbar-inverse .navbar-collapse {
+  border: none;
+}
+.navbar-inverse .navbar-nav > li > a {
+  color: #eee;
+}
+.navbar > .container .navbar-brand {
+  width: 230px;
+  height: 54px;
+  margin: -0.2rem 0 2px 1.3rem;
+  text-indent: -9999rem;
+  background: url(../img/civicspaces-logo.png) no-repeat;
+  // font-size: 1.6em;
+  @media all and (min-width: 768px) {
+    margin-left: 0;
+  }
+}
 
-*/
-@media screen and (min-width: 30em) {
-
-  body { font-size: 19px; }
-
+.navbar-nav {
+  font-size: 1.2em;
+}
+.nav-prime {
+  font-size: 1.5em;
+}
+.promo { /* div */
+  margin: 0 1em 1em 0;
+  padding: 1em;
+  -webkit-border-radius: 0.5em;
+  -moz-border-radius: 0.5em;
+  border-radius: 0.5em;
+  background: #e2ecf1;
 }
 
 
-/*
---------------------------------------------------------
-media query for larger devices
-
-*/
-@media screen and (min-width: $maxWidthDesktop) {
-  
-  body { font-size: 21px; }
-
-  .jumbotron > * {
-    max-width: $maxContentWidth;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .jumbotron > h1 {
-    margin-left: auto;
-    margin-right: auto; 
-  }
-
-  h1 {
-    font-size: 2em;
-    small {
-      font-size: 0.6em;
-    }
-  }
-
+.list-group-item:nth-child(odd) {
+  background: #f6f6f6;
 }
+.home {
+  font-size: 2.5em;
+  margin-top: 2em;
+}
+
+.note { /* p */
+  color: #999;
+}
+
+.list-inline {
+  & > li {
+    padding-right: 0.5em;
+    border-right: 1px solid black;
+  }
+  & > li:last-child {
+    border-right: none;
+  }
+}
+
+.grouped {
+  padding-left: 0.5em;
+}
+
+.section {
+  margin-bottom: 2em;
+}
+
+.footer {
+  padding: 1em 0 3em 0;
+}
+
+// @media all and (min-width: 1200px) {
+//   body { font-size: 20px; }
+// }
