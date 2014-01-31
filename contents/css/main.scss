@@ -22,145 +22,12 @@ $menuSpeed: 0.2s;
 
 @import "reset";
 @import "mixins";
+@import "defaults";
 @import "header";
+@import "custom-classes";
+@import "forms";
+@import "footer";
 
-
-body {
-  margin: 0;
-  padding: 2em 0 1em;
-  background: $bgColor;
-  font-family: $copyFont;
-  color: $typeColor;
-  line-height: 120%;
-}
-
-h1 {
-  font-size: 1.5em;
-  font-family: $titleFont;
-  font-weight: 700;
-  line-height: 105%;
-
-  > small {
-    display: block;
-    margin-top: 0.3em;
-    font-size: 0.7em;
-    font-family: $copyFont;
-    font-weight: normal;
-    color: $typeColor;
-    line-height: 100%;
-  }
-
-  > a {
-    display: block;
-    margin: 0.3em 0 0;
-    font-size: 0.7em;
-    &:hover, &:focus, &.selected {
-      color: #000;
-    }
-  }
-}
-
-h2 {
-  font-family: $titleFont;
-  margin-top: 1.3em;
-}
-
-h3 {
-  margin: 2em 0 0.5em;
-}
-
-h2 + h3 {
-  margin-top: 0;
-}
-
-h3, h4, h5, h6 {
-  font-weight: normal;
-}
-
-p {
-  margin: 0.3em 0 0.5em;
-}
-
-a {
-  color: $linkColor;
-  text-decoration: none;
-
-  &:hover {
-    color: $hoverColor;
-  }
-}
-
-li {
-  //margin-bottom: 0.3em;
-}
-
-main {
-  margin: 0;
-  padding: 1em;
-}
-
-.jumbotron {
-  padding: 1em;
-  background: $paleBg;
-  & > h1 {
-    margin: 0;
-    padding: 1em 0;
-    font-size: 1.6em;
-  }
-  & .promo {
-    background: #fff;
-  }
-}
-
-.promo {
-  margin: 0 0 1em 0;
-  padding: 1em;
-  @include border-radius(0.3em);
-}
-
-a.button {
-  display: inline-block;
-  margin: 0 1em 0 0;
-  padding: 0.5em 1.5em;
-  background: #236e87;
-  @include border-radius(1.1em);
-  font-family: $titleFont;
-  color: #fff;
-  &:hover, &:focus {
-    background: #195c73;
-  }
-}
-
-body > footer {
-  padding: 1em 1em 6em;
-  background: #bbb;
-  font-size: 0.8em;
-  & > ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    & > li {
-      display: inline-block;
-      & > a {
-        color: #000;
-        &:after {
-          content: "|";
-          padding-left: 0.5em;
-          padding-right: 0.25em;
-        }
-      }
-      &:last-child a:after {
-        content: "";
-        padding: 0;
-      }
-    }
-  }
-  & > p {
-    margin: 0;
-    padding: 0;
-    color: #444;
-  }
-}
 
 /*
 --------------------------------------------------------
@@ -182,13 +49,6 @@ media query for larger devices
 @media screen and (min-width: $maxWidthDesktop) {
   
   body { font-size: 21px; }
-
-  // body > section, body > footer {
-  //   width: 100%;
-  //   max-width: $maxWidthDesktopRem;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  // }
 
   .jumbotron > * {
     max-width: $maxContentWidth;

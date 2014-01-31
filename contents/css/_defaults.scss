@@ -1,0 +1,61 @@
+body {
+  margin: 0;
+  padding: 2.3em 0 0;
+  background: $bgColor;
+  color: $typeColor;
+  font-family: $copyFont;
+  line-height: 120%;
+}
+
+main {
+  margin: 0;
+  padding: 1em 0 0;
+}
+
+h1 {
+  font-size: 1.5em;
+  font-family: $titleFont;
+  font-weight: normal;
+  line-height: 105%;
+}
+
+main > h1 {
+  padding-left: 1rem;
+}
+
+h2 {
+  margin-top: 1.3em;
+  font-family: $titleFont;
+  font-weight: normal;
+  font-size: 1.3em;
+}
+
+h3 {
+  margin: 2em 0 0.5em;
+}
+
+h2 + h3 {
+  margin-top: 0;
+}
+
+h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+p {
+  margin: 0.3em 0 0.5em;
+}
+
+p > small {
+  color: #444;
+}
+
+a {
+  color: $linkColor;
+  text-decoration: none;
+
+  &:hover, &:focus {
+    color: $hoverColor;
+  }
+}
+
