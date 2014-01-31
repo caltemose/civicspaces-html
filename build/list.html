@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width">
+    <title>CivicSpaces - connecting...</title>
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Arvo">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <header id="masthead" role="banner">
+      <input id="burger" type="checkbox" name="burger">
+      <nav id="nav">
+        <ul>
+          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/signin.html">Sign In</a></li>
+          <li class="promote"><a href="/find.html">Find</a></li>
+          <li class="promote"><a href="/list.html">List</a></li>
+        </ul>
+      </nav>
+      <header id="header">
+        <h1><a href="/"><span>CivicSpaces</span></a>
+          <label id="burgerTrigger" for="burger"></label>
+        </h1>
+      </header>
+    </header>
+    <main>
+      <h1>Add a New Space</h1>
+      <section class="wrapped">
+        <form>
+          <h2 class="boxed">Location and Contact Info</h2>
+          <div class="inner">
+            <div class="col2">
+              <label>*Address: 
+                <input name="address" type="text" maxlength="128">
+              </label>
+              <label>City: 
+                <input name="city" type="text" maxlength="128">
+              </label>
+              <label>*Zip Code: 
+                <input name="zip" type="text" maxlength="10">
+              </label>
+              <p class="show-2col"><small>*Required fields.</small></p>
+            </div>
+            <div class="col2">
+              <label>*Contact name: 
+                <input name="contactName" type="text" maxlength="128">
+              </label>
+              <label>*Contact email: 
+                <input name="contactEmail" type="text" maxlength="128">
+              </label>
+              <label>*Contact phone: 
+                <input name="contactPhone" type="text" maxlength="16">
+              </label>
+              <label>
+                <input name="terms" type="checkbox">*I agree to the <a href="/terms">Terms &amp; Conditions</a> for listing properties on this site and am aware of my responsibilities as a property listing agent.
+              </label>
+              <p class="show-1col"><small>*Required fields.</small></p>
+              <input type="submit" name="submit" value="Create Listing">
+            </div>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/resources.html">Resources</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/terms">Terms &amp; Conditions</a></li>
+        <li><a href="/privacy">Privacy Policy</a></li>
+      </ul>
+      <p class="copyright">Copyright ©2014 CivicSpaces.</p>
+    </footer>
+    <script>
+      document.getElementById("burgerTrigger").onclick = function () {};
+      
+    </script>
+  </body>
+</html>
