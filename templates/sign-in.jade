@@ -1,0 +1,35 @@
+extends layout
+
+block title
+  title CivicSpaces: Sign In
+
+block content
+
+  div.container
+
+    h1 Sign In
+
+    div.row
+
+      div.col-md-5
+
+        p Sign in with your existing account below:
+
+        form
+
+          label
+            | Email address:
+            input.form-control(type="text" name="email" data-validate-rules="required|email") 
+            span
+
+          label
+            | Password:
+            input.form-control(type="password" name="password" data-validate-rules="required")
+            span
+
+          input.btn.btn-primary.drop(type="submit" name="submit" value="Sign In") 
+
+
+block scripts
+  script(src="/js/cs-validator.js")
+  script(src="/js/sign-in.js")

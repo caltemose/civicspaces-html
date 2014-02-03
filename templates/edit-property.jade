@@ -5,9 +5,8 @@ block content
 
     h1 Manage Your Space
 
-    div.row
-      div.col-md-10.col-lg-8
-        p Edit your space details below. You can increase your page's popularity by including more details and uploading several good-quality photos.
+    
+    p.not-too-wide Edit your space details below. You can increase your page's popularity by including more details and uploading several good-quality photos.
 
     form
 
@@ -20,7 +19,8 @@ block content
 
             label
               | *Address: 
-              input.form-control(name="address" type="text" maxlength="128")
+              input.form-control(name="address" type="text" maxlength="128" data-validate-rules="required")
+              span
 
             label
               | City: 
@@ -28,21 +28,26 @@ block content
 
             label
               | *Zip Code: 
-              input.form-control(name="zip" type="text" maxlength="10")
+              input.form-control(name="zip" type="text" maxlength="10" data-validate-rules="required|zip")
+              span
 
           
           div.col-md-6
             label
-              | *Contact name: 
-              input.form-control(name="contactName" type="text" maxlength="128")
+              | *Contact Name: 
+              input.form-control(name="contactName" type="text" maxlength="128" data-validate-rules="required")
+              span
 
             label
-              | *Contact email: 
-              input.form-control(name="contactEmail" type="text" maxlength="128") 
-
+              | *Contact Email: 
+              input.form-control(name="contactEmail" type="text" maxlength="128" data-validate-rules="required|email")
+              span
+          
             label
-              | *Contact phone: 
-              input.form-control(name="contactPhone" type="text" maxlength="16") 
+              | *Contact Phone: 
+              input.form-control(name="contactPhone" type="text" maxlength="12" data-validate-rules="required|phone")
+              span
+              
 
 
       div.section
@@ -169,15 +174,22 @@ block content
                 input(type="radio" name="kitchen" value="full") 
                 |  Full kitchen
 
-      div.section
-
-        h2 Photos
-
 
       div.section
 
         h2 Description
         
-      
+        p.not-too-wide Type your description below. You may wish to include details about allowed uses, amenities or other details.
+
+        textarea.form-control.not-too-wide(name="description" rows="10" cols="20")
+
+      //- div.section
+
+      //-   h2 Photos
+
+
       input.btn.btn-success(type="submit" name="submit" value="Save Listing") 
 
+block scripts
+  script(src="/js/cs-validator.js")
+  script(src="/js/edit-property.js")

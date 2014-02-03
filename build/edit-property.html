@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width">
+    <title>CivicSpaces - connecting...</title>
+    <link rel="stylesheet" href="/css/vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/main.css">
+  </head>
+  <body>
+    <div role="navigation" class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">CivicSpaces</a>
+        </div>
+        <div class="collapse navbar-collapse no-transition">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/resources.html">Resources</a></li>
+            <li><a href="/sign-in.html">Sign In</a></li>
+            <li><a href="/find.html" class="nav-prime">Find</a></li>
+            <li><a href="/list.html" class="nav-prime">List</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="container">
+        <h1>Manage Your Space</h1>
+        <div class="row">
+          <div class="col-md-10 col-lg-8">
+            <p>Edit your space details below. You can increase your page's popularity by including more details and uploading several good-quality photos.</p>
+          </div>
+        </div>
+        <form>
+          <div class="section">
+            <h2>Location and Contact Info</h2>
+            <div class="row">
+              <div class="col-md-6">
+                <label>*Address: 
+                  <input name="address" type="text" maxlength="128" class="form-control">
+                </label>
+                <label>City: 
+                  <input name="city" type="text" maxlength="128" class="form-control">
+                </label>
+                <label>*Zip Code: 
+                  <input name="zip" type="text" maxlength="10" class="form-control">
+                </label>
+              </div>
+              <div class="col-md-6">
+                <label>*Contact name: 
+                  <input name="contactName" type="text" maxlength="128" class="form-control">
+                </label>
+                <label>*Contact email: 
+                  <input name="contactEmail" type="text" maxlength="128" class="form-control">
+                </label>
+                <label>*Contact phone: 
+                  <input name="contactPhone" type="text" maxlength="16" class="form-control">
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <h2>Size and Type</h2>
+            <div class="row">
+              <div class="col-sm-6">
+                <label>Type of space: 
+                  <select name="spaceType" class="form-control">
+                    <option value="">Select one...</option>
+                    <option value="loft">Loft/Mixed Use</option>
+                  </select>
+                </label>
+                <label>Preferred length of lease:
+                  <select name="leaseLength" class="form-control">
+                    <option value="">None</option>
+                    <option value="single">Single-day Use</option>
+                  </select>
+                </label>
+              </div>
+              <div class="col-sm-6">
+                <label>Area: <small>(square feet) </small>
+                  <input type="text" size="5" name="squareFeet" maxlength="5" class="form-control">
+                </label>
+                <label>Maximum occupancy:
+                  <input type="text" size="5" name="maxOccupants" maxlength="5" class="form-control">
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <h2>Allowed Uses</h2>
+            <div class="row">
+              <div class="col-sm-6">
+                <label>Allow on premises:</label>
+                <div class="grouped">
+                  <label>
+                    <input type="checkbox" name="allowedFood"> Food &amp; beverage
+                  </label>
+                  <label>
+                    <input type="checkbox" name="allowedAlcohol"> Alcohol 
+                  </label>
+                  <label>
+                    <input type="checkbox" name="allowedMusic"> Loud music/noise <small>(with owner approval)</small>
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <label>Allowed modifications of space:</label>
+                <div class="grouped">
+                  <label>
+                    <input type="radio" name="allowedMods" value="none"> None
+                  </label>
+                  <label>
+                    <input type="radio" name="allowedMods" value="non-intrusive"> Non-intrusive only <small>(wall hangings, for example)</small>
+                  </label>
+                  <label>
+                    <input type="radio" name="allowedMods" value="intrusive"> Intrusive only <small>(with owner's permission)</small>
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <h2>Amenities</h2>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="grouped">
+                  <label>
+                    <input type="checkbox" name="wifi"> Wireless internet
+                  </label>
+                  <label>
+                    <input type="checkbox" name="parking"> On-site parking
+                  </label>
+                  <label>
+                    <input type="checkbox" name="handicap"> Handicap Access
+                  </label>
+                  <label>
+                    <input type="checkbox" name="furnished"> This space is furnished
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <label>Bathroom facilities:</label>
+                <div class="grouped">
+                  <label>
+                    <input type="radio" name="bathroom" value="none"> None
+                  </label>
+                  <label>
+                    <input type="radio" name="bathroom" value="single"> Single bathroom
+                  </label>
+                  <label>
+                    <input type="radio" name="bathroom" value="multiple"> Multiple bathrooms
+                  </label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <label>Bathroom facilities:</label>
+                <div class="grouped">
+                  <label>
+                    <input type="radio" name="kitchen" value="none"> None
+                  </label>
+                  <label>
+                    <input type="radio" name="kitchen" value="partial"> Partial kitchen
+                  </label>
+                  <label>
+                    <input type="radio" name="kitchen" value="full"> Full kitchen
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <h2>Photos</h2>
+          </div>
+          <div class="section">
+            <h2>Description</h2>
+          </div>
+          <input type="submit" name="submit" value="Save Listing" class="btn btn-success">
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <ul class="list-inline">
+          <li><a href="/">Home</a></li>
+          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/terms">Terms &amp; Conditions</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+        </ul>
+        <p class="copyright">Copyright ©2014 CivicSpaces.</p>
+      </div>
+    </div>
+    <script src="/js/vendor/jquery.min.js"></script>
+    <script src="/js/vendor/bootstrap.min.js"></script>
+  </body>
+</html>
