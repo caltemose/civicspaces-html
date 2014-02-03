@@ -27,35 +27,31 @@
     <div class="main">
       <div class="container">
         <h1>Manage Your Space</h1>
-        <div class="row">
-          <div class="col-md-10 col-lg-8">
-            <p>Edit your space details below. You can increase your page's popularity by including more details and uploading several good-quality photos.</p>
-          </div>
-        </div>
+        <p class="not-too-wide">Edit your space details below. You can increase your page's popularity by including more details and uploading several good-quality photos.</p>
         <form>
           <div class="section">
             <h2>Location and Contact Info</h2>
             <div class="row">
               <div class="col-md-6">
                 <label>*Address: 
-                  <input name="address" type="text" maxlength="128" class="form-control">
+                  <input name="address" type="text" maxlength="128" data-validate-rules="required" class="form-control"><span></span>
                 </label>
                 <label>City: 
                   <input name="city" type="text" maxlength="128" class="form-control">
                 </label>
                 <label>*Zip Code: 
-                  <input name="zip" type="text" maxlength="10" class="form-control">
+                  <input name="zip" type="text" maxlength="10" data-validate-rules="required|zip" class="form-control"><span></span>
                 </label>
               </div>
               <div class="col-md-6">
-                <label>*Contact name: 
-                  <input name="contactName" type="text" maxlength="128" class="form-control">
+                <label>*Contact Name: 
+                  <input name="contactName" type="text" maxlength="128" data-validate-rules="required" class="form-control"><span></span>
                 </label>
-                <label>*Contact email: 
-                  <input name="contactEmail" type="text" maxlength="128" class="form-control">
+                <label>*Contact Email: 
+                  <input name="contactEmail" type="text" maxlength="128" data-validate-rules="required|email" class="form-control"><span></span>
                 </label>
-                <label>*Contact phone: 
-                  <input name="contactPhone" type="text" maxlength="16" class="form-control">
+                <label>*Contact Phone: 
+                  <input name="contactPhone" type="text" maxlength="12" data-validate-rules="required|phone" class="form-control"><span></span>
                 </label>
               </div>
             </div>
@@ -170,10 +166,9 @@
             </div>
           </div>
           <div class="section">
-            <h2>Photos</h2>
-          </div>
-          <div class="section">
             <h2>Description</h2>
+            <p class="not-too-wide">Type your description below. You may wish to include details about allowed uses, amenities or other details.</p>
+            <textarea name="description" rows="10" cols="20" class="form-control not-too-wide"></textarea>
           </div>
           <input type="submit" name="submit" value="Save Listing" class="btn btn-success">
         </form>
@@ -184,14 +179,17 @@
         <ul class="list-inline">
           <li><a href="/">Home</a></li>
           <li><a href="/resources.html">Resources</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/terms">Terms &amp; Conditions</a></li>
-          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/sitemap.html">Sitemap</a></li>
+          <li><a href="/terms.html">Terms &amp; Conditions</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
         </ul>
         <p class="copyright">Copyright ©2014 CivicSpaces.</p>
       </div>
     </div>
     <script src="/js/vendor/jquery.min.js"></script>
     <script src="/js/vendor/bootstrap.min.js"></script>
+    <script src="/js/cs-validator.js"></script>
+    <script src="/js/edit-property.js"></script>
   </body>
 </html>

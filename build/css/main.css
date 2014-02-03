@@ -96,11 +96,28 @@ input.btn {
 .list-inline > li:last-child {
   border-right: none; }
 
+.not-too-wide {
+  max-width: 64rem; }
+
 .grouped {
   padding-left: 0.5em; }
 
 .section {
   margin-bottom: 2em; }
+
+.has-error span {
+  display: block;
+  padding-left: 0.4em;
+  margin-bottom: 0.75em;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #a00; }
+
+.terms.has-error .error {
+  background: #fee; }
+
+.btn.drop {
+  margin-top: 0.6em; }
 
 .footer {
   padding: 1em 0 3em 0; }

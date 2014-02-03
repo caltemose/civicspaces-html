@@ -66,9 +66,9 @@ input.btn {
   color: #eee;
 }
 .navbar > .container .navbar-brand {
-  width: 230px;
-  height: 54px;
-  margin: -0.2rem 0 2px 1.3rem;
+  width: 200px;
+  height: 47px;
+  margin: 0 0 2px 1.3rem;
   text-indent: -9999rem;
   background: url(../img/civicspaces-logo.png) no-repeat;
   // font-size: 1.6em;
@@ -146,8 +146,22 @@ input.btn {
 
 .footer {
   padding: 1em 0 3em 0;
-}
+  font-size: 0.8em;
 
-// @media all and (min-width: 1200px) {
-//   body { font-size: 20px; }
-// }
+  ul {
+    list-style-type: none;
+    margin: 0 0 0.8em;
+    padding: 0;
+
+    & > li {
+      display: inline-block;
+      margin-right: 1.8em;
+      padding-right: 0;
+
+      @media all and (max-width: 768px) {
+        display: block;
+        padding: 0.3em 0;
+      }
+    }
+  }
+}
